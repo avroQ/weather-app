@@ -61,3 +61,43 @@ Grafana доступна по адресу: http://localhost:3000
 Рекомендуемый запрос: _probe_success_ 
 <img width="1554" height="724" alt="изображение" src="https://github.com/user-attachments/assets/1ecf5255-5b18-433b-a474-671174f43406" />
 
+# Настройка Prometheus
+
+Prometheus доступен по адресу: http://localhost:9090
+
+## Где вводить запросы
+
+Работа с метриками выполняется во вкладке **Graph**:
+
+1. Добавьте новый запрос "Add query"
+2. Введите запрос в поле **Expression**  
+3. Нажмите **Execute**  
+4. Переключайтесь между вкладками **Table** и **Graph** для просмотра результата
+
+## Основные запросы для мониторинга приложения
+
+Проверка доступности: **probe_success**
+Получение HTTP-кода ответа: **probe_http_status_code**
+Время выполнения проверки: **probe_duration_seconds**
+
+
+Эти метрики позволяют увидеть текущее состояние сервиса, успешность проверки и задержку ответа.
+
+<img width="603" height="209" alt="изображение" src="https://github.com/user-attachments/assets/619ecfbe-28de-47dd-95f1-47216ccb4bab" />
+
+
+## Status → Targets
+
+Во вкладке **Status → Targets** отображаются все endpoints, которые опрашивает Prometheus.  
+<img width="1852" height="426" alt="изображение" src="https://github.com/user-attachments/assets/269d2a6a-e40d-43f1-9311-c4f7783c77ab" />
+
+
+Здесь можно увидеть:
+- состояние проверок (UP/DOWN)  
+- время последней проверки  
+- ошибки, если они возникли  
+- полный список job’ов и их endpoints  
+
+При корректной работе мониторинга для `weather-http` будет отображаться статус **UP**.
+
+
