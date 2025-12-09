@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>weather-app</title>
+  </head>
+  <body>
+ <main>
+      <div class="container">
+        <header class="header">
+          <div class="flex">
+            <ul class="header_ul">
+              <li><a href="#" title="В разработке">Сменить регион</a></li>
+              <li><a href="#" title="В разработке">Сбросить</a></li>
+              <li><a href="#" title="В разработке">Уровень воды</a></li>
+              <li><a href="#" title="В разработке">Резюме</a></li>
+            </ul>
+          </div>
+        </header>
+      </div>
+      <section class="weather_main">
+        <div class="container">
+          <div class="weather" id="weather">
+            <div class="weather__header">
+              <h2 class="weather__title">Погода</h2>
+              <div class="weather__location">58.0105°N, 56.2502°E</div>
+            </div>
+
+            <div class="weather__body">
+              <div class="weather__temp">
+                <span id="weather-temp">--°C</span>
+              </div>
+
+              <div class="weather__sun">
+                <div>Восход: <span id="weather-sunrise">--:--</span></div>
+                <div>Закат: <span id="weather-sunset">--:--</span></div>
+              </div>
+            </div>
+
+            <div class="weather__footer">
+              Обновлено: <span id="weather-updated">--:--</span>
+            </div>
+            <div class="weather__week" id="weather-week"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
